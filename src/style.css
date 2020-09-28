@@ -1,0 +1,68 @@
+body {
+  font-family: "Baloo Bhaina 2", cursive;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: #c68883;
+}
+
+h1 {
+  color: #a15e59;
+}
+
+.cities {
+  margin: 0 auto;
+  padding: 30px 0;
+  font-size: 1.2rem;
+}
+form {
+  display: block;
+  margin: 0 auto;
+  text-align: right;
+}
+.form-group .form-control {
+  text-align: right;
+}
+.current {
+  padding: 15px 0;
+}
+.current-location {
+  background-image: linear-gradient(to left, #aacefd 0%, #baa7b9 100%);
+}
+.current-temp {
+  background-image: linear-gradient(to left, #baa7b9 0%, #aacefd 100%);
+}
+.duck {
+  background-image: linear-gradient(120deg, #c68883 0%, #c2e9fb 100%);
+}
+li {
+  list-style: none;
+}
+
+.forecast {
+  padding: 50px;
+  color: #693935;
+}
+.days {
+  text-align: right;
+  font-size: large;
+  background-image: linear-gradient(to left, #aacefd 0%, #f9d423 100%);
+}
+.temp {
+  text-align: center;
+  font-size: 80%;
+}
+.chance {
+  padding: 10px 0;
+  font-size: 130%;
+}
+.temp-low {
+  background-image: linear-gradient(to right, #aacefd 0%, #f9d423 100%);
+}
+.temp-high {
+  background-image: linear-gradient(to left, #f83600 0%, #f9d423 100%);
+}
+.rain {
+  background-image: linear-gradient(to right, #ef4a11 0%, #aacefd 100%);
+}
+.numbers {
+  font-size: 120%;
+}

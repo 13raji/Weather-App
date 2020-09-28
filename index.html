@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=#, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fdce26953a.js" crossorigin="anonymous"></script>
+    <title>Weather For Ducks</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row cities">
+        <div class="col"></div>
+        <div class="col-2">London</div>
+        <div class="col-2">Cardiff</div>
+        <div class="col-2">New York</div>
+        <div class="col-2">Melbourne</div>
+        <div class="col-2">Florence</div>
+        <div class="col"></div>
+      </div>
+      <form id="search-form">
+        <div class="row form-group" >
+          <div class="col-6"></div>
+          <div class="col-2">
+            <button type="button" class="btn btn-link" id="current-location">Current location</button>
+          </div>
+          <div class="col-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search Engine"
+              id="search"
+            />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </br>
+      <div class="row current">
+        <div class="col"></div>
+        <div class="card current-location col-5">
+          <div class="card-body">
+            <h5 >
+              Current Location:
+            </br>
+            <span id=date-time-stamp>
+              date/time
+            </span>
+            </h5>
+            <h1 id=city>
+              Bexleyheath
+            </h1>
+          </div>
+        </div>
+        <div class="card current-temp col-5">
+          <div class="card-body">
+            <h5>
+              <a href="#" id="celcius">
+                °C
+              </a> 
+            |
+          <a href="#" id="farenheit">
+            °F
+          </a></h5>
+            <h1 id="current-temp">
+              22°C <i class="fas fa-cloud-sun"></i>
+            </h1>
+            <h5>
+              chance of precipitation = 22%
+            </h5>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col-4"></div>
+      <div class="card duck mb-3 col-4">
+        <div class="card-header">
+          <h1>
+            Overcast Duck
+          </h1>
+        </div>
+        <div class="card-body">
+          <img src="images/duckovercast.jpg" width="300" alt="duck overcast"/>
+        </div>
+        </div>
+      </div>
+      <div class="col-4"></div>
+      </div>
+      
+        
+          <div class="row forecast">
+            <div class="card days mb-3 col-2">
+              <div class="card-header days">
+                <h3>
+                  Next 5 days
+                </h3>
+              </div>
+              <div class="card-body">
+                <ul class="days" >
+                  <li>
+                    Thurs
+                  </li>
+                  <li>
+                    Fri
+                  </li>
+                  <li>
+                    Sat
+                  </li>
+                  <li>
+                    Sun
+                  </li>
+                  <li>
+                    Mon
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card  temp-low mb-3 col-4">
+              <div class="card-header temp">
+                <h2>
+                  Low
+                </h2>
+              </div>
+              <div class="card-body numbers">
+                <div class="row">
+                  <div class="col-9">
+                  </div>
+                  <div class="col">
+                    15°C
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-7">
+                  </div>
+                  <div class="col">
+                    12°C
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-5">
+                  </div>
+                  <div class="col">
+                    10°C
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4">
+                  </div>
+                  <div class="col">
+                    9°C
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4">
+                  </div>
+                  <div class="col">
+                    9°C
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card temp-high mb-3 col-4">
+              <div class="card-header temp">
+                <h2>
+                  High
+                </h2>
+              </div>
+              <div class="card-body">
+                <div class="row numbers">
+                  <div class="col-7">
+                  </div>
+                  <div class="col">
+                    23°C
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-5">
+                  </div>
+                  <div class="col">
+                    21°C
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                  </div>
+                  <div class="col">
+                    18°C
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4">
+                  </div>
+                  <div class="col">
+                    20°C
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-5">
+                  </div>
+                  <div class="col">
+                  21°C
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="card rain mb-3 col-2">
+              <div class="card-header chance">
+                <p>
+                  % of precipitation
+                <p>
+              </div>
+              <div class="card-body">
+              <ul class="precipitation numbers">
+                <li>
+                  31%
+                </li>
+                <li>
+                  49%
+                </li>
+                <li>
+                  14%
+                </li>
+                <li>
+                  9%
+                </li>
+                <li>
+                  11%
+                </li>
+              </ul>
+              </div>
+            </div>
+          </div>
+      
+    </div>
+    <script src="src/index.js">
+    </script>
+  </body>
+</html>
