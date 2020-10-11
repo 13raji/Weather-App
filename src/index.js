@@ -38,6 +38,16 @@ city.addEventListener("submit", handleSubmit);
 
 search("London");
 
+function changeCity(event){
+  event.preventDefault;
+  
+
+}
+
+let cityDivert = document.querySelector("#city-divert-Cardiff");
+cityDivert.addEventListener("click", changeCity);
+
+
 
 
 console.log(city);
