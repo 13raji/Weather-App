@@ -9,6 +9,19 @@ h1 {
   font-size: 30px;
 }
 
+h6 {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+p {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.row {
+  margin: 0;
+}
 .cities {
   margin: 0 auto;
   padding: 30px 0;
@@ -40,11 +53,8 @@ form {
 }
 
 .forecast-wrapper {
-  margin-left: 7%;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-  line-height: 33px;
-  max-width: 600px;
+  max-width: 700px;
+  margin: auto;
 }
 .forecast {
   padding: 50px;
@@ -53,4 +63,8 @@ form {
 .forecast-frame {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  padding: 2%;
+}
+h5 .forecast-frame {
+  text-align: right;
 }
