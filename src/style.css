@@ -6,6 +6,7 @@ body {
 
 h1 {
   color: #a15e59;
+  font-size: 30px;
 }
 
 .cities {
@@ -41,9 +42,9 @@ li {
   padding: 50px;
   color: #693935;
 }
-.days {
+.time {
   text-align: right;
-  font-size: large;
+  font-size: 20px;
   background-image: linear-gradient(to left, #aacefd 0%, #f9d423 100%);
 }
 .temp {
