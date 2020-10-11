@@ -68,17 +68,24 @@ function displayTemperatureCurrent(response) {
   let searchTemp = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector("#current-temp");
   currentTemp.innerHTML = `${searchTemp}°C `;
-  console.log(response.data.name);
+  console.log(response.data);
   let currentLocation = document.querySelector("#city");
-  currentLocation.innerHTML = `${response.data.name}, (nearest weather station)`;
+  let descriptionElement = document.querySelector("#description")
+  let feelsLikeElement = document.querySelector("#feels-like");
+  let feelsLikeTemp= Math.round(response.data.main.feels_like);
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let windSpeedElement= Math.round(response.data.wind.speed);
+  let iconElement = document.querySelector("#icon");
+  currentLocation.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  feelsLikeElement.innerHTML = `Feels like ${feelsLikeTemp}°C `;
+  humidityElement.innerHTML = `Humidity = ${response.data.main.humidity}%`;
+  windElement.innerHTML = `Wind speed = ${windSpeedElement}mps`;
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   celciusTemperature=Math.round(response.data.main.temp);
 }
-
-function navigate() {
-  navigator.geolocation.getCurrentPosition(showPosition);
-}
-let currentLocation = document.querySelector("#current-location");
-currentLocation.addEventListener("click", navigate);
 function showPosition(position) {
   let lat = Math.round(position.coords.latitude);
   let long = Math.round(position.coords.longitude);
@@ -86,7 +93,15 @@ function showPosition(position) {
   console.log(currentCoords);
   let apiKey = "03ac878f5cd649f0cfd00e677d2c2dcc";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?${currentCoords}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperatureCurrent);
-  celciusTemperature=Math.round(showTemperatureCurrent.data.main.temp);
+  axios.get(apiUrl).then(displayTemperatureCurrent);
 }
+
+function navigate() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let currentLocation = document.querySelector("#current-location");
+currentLocation.addEventListener("click", navigate);
+
+
 
