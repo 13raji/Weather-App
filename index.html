@@ -35,10 +35,11 @@
           </div>
           <div class="col-5">
             <input
-              type="text"
+              type="search"
               class="form-control"
-              placeholder="Search Engine"
-              id="search"
+              placeholder="City name..."
+              id="city-input"
+              autocomplete="off"
             />
           </div>
         </div>
@@ -51,33 +52,33 @@
         <div class="col-2"></div>
         <div class="card current-location col-4">
           <div class="card-body">
-            <h5 >
-              Current Location:
-            </br>
-            <span id=date-time-stamp>
-              date/time
-            </span>
+            <h5>
+              Last Updated: <span id="date-time-stamp"></span>
             </h5>
-            <h1 id=city>
-              Bexleyheath
+            <img src="", alt="" id="icon"/>
+            <h1 id="city">
             </h1>
+            <h3 id="description">
+            </h3>
           </div>
         </div>
         <div class="card current-temp col-4">
           <div class="card-body">
             <h5>
-              <a href="#" id="celcius">
+              <a href="#" id="celcius-link">
                 °C
               </a> 
             |
-          <a href="#" id="farenheit">
+          <a href="#" id="fahrenheit-link">
             °F
           </a></h5>
             <h1 id="current-temp">
-              22°C <i class="fas fa-cloud-sun"></i>
             </h1>
-            <h5>
-              chance of precipitation = 22%
+            <h5 id="feels-like">
+            </h5>
+            <h5 id="humidity">
+            </h5>
+            <h5 id="wind">
             </h5>
           </div>
         </div>

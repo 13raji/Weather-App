@@ -8,6 +8,9 @@ h1 {
   color: #a15e59;
   font-size: 30px;
 }
+h3 {
+  text-transform: capitalize;
+}
 
 h6 {
   font-size: 0.8rem;
