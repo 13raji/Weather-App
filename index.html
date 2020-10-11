@@ -17,6 +17,7 @@
   </head>
   <body>
     <div class="container">
+      <div class="app-wrap">
       <div class="row cities">
         <div class="col"></div>
         <div class="col-2">London</div>
@@ -85,140 +86,203 @@
       
       </div>
       
+      <div class="forecast-wrapper">
+      <div class="row forecast-headings">
+        <div class="time col-1">
+          <h5>
+            Time
+          </h5>
+        </div>   
         
-          <div class="row forecast">
-            <div class="card days mb-3 col-2">
-              <div class="card-header time">
-                <h3>
-                  Time
-                </h3>
-              </div>
-              <div class="card-body">
-                <ul class="time" >
-                  <li>
-                    12.00
-                  </li>
-                  <li>
-                    15.00
-                  </li>
-                  <li>
-                    18.00
-                  </li>
-                  <li>
-                    21.00
-                  </li>
-                  <li>
-                    00.00
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="card  temp-low mb-3 col-2">
-              <div class="card-header temp">
-                <h2>
-                  Temp
-                </h2>
-              </div>
-              <div class="card-body numbers">
-                <div class="row">
-                  
-                  <div class="col">
-                    15°C
-                  </div>
-                </div>
-                <div class="row">
-                  
-                  <div class="col">
-                    12°C
-                  </div>
-                </div>
-                <div class="row">
-                  
-                  <div class="col">
-                    10°C
-                  </div>
-                </div>
-                <div class="row">
-                  
-                  <div class="col">
-                    9°C
-                  </div>
-                </div>
-                <div class="row">
-                  
-                  <div class="col">
-                    9°C
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card temp-high mb-3 col-2">
-              <div class="card-header temp">
-                <h2>
-                  Feels Like
-                </h2>
-              </div>
-              <div class="card-body">
-                <div class="row numbers">
-                  
-                  <div class="col">
-                    23°C
-                  </div>
-                </div>
-                <div class="row">
-                  
-                  <div class="col">
-                    21°C
-                  </div>
-                </div>
-                <div class="row">
-                  
-                  <div class="col">
-                    18°C
-                  </div>
-                </div>
-                <div class="row">
-                  
-                  <div class="col">
-                    20°C
-                  </div>
-                </div>
-                <div class="row">
-                  
-                  <div class="col">
-                  21°C
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-            <div class="card rain mb-3 col-2">
-              <div class="card-header chance">
-                <p>
-                  % of precipitation
-                <p>
-              </div>
-              <div class="card-body">
-              <ul class="precipitation numbers">
-                <li>
-                  31%
-                </li>
-                <li>
-                  49%
-                </li>
-                <li>
-                  14%
-                </li>
-                <li>
-                  9%
-                </li>
-                <li>
-                  11%
-                </li>
-              </ul>
-              </div>
-            </div>
+        <div class="temp col-1">
+          <h5>
+            Temp
+          </h5>
+        </div>
+        <div class="symbol col-1">
+          
+        </div>
+        <div class="feels-like col-1">
+          <h5>
+            Feels like
+          </h5>
+        </div>
+        <div class="precip col-1">
+          <h5>
+            %Precipitation
+          </h5>
+        </div>
+      </div>
+
+      <div class="row forecast-first">
+        <div class="time col-1">
+        <h6>
+          12.00
+        </h6>
+        </div>
+        
+        <div class="temp col-1">
+          <h6>
+            12°C
+          </h6>
+        </div>
+        <div class="symbol col-1">
+          <h6>
+            <i class="fas fa-cloud-sun"></i>
+          </h6>
+        </div>
+        <div class="temp-feels col-1">
+          <h6>
+            13°C
+          </h6>
+        </div>
+        <div class="precip col-1">
+          <h6>
+            31%
+          </h6>
+        </div>
+      </div>
+
+      <div class="row forecast-second">
+        <div class="time col-1">
+          <h6>
+            15.00
+          </h6>
+        </div>
+        
+        <div class="temp col-1">
+          <h6>
+            14°C
+          </h6>
+        </div>
+        <div class="symbol col-1">
+          <h6>
+            <i class="fas fa-cloud-sun"></i>
+          </h6>
+        </div>
+        <div class="temp-feels col-1">
+          <h6>
+            13°C
+          </h6>
+        </div>
+        <div class="precip col-1">
+          <h6>
+            38%
+          </h6>
+        </div>
+      </div>
+
+      <div class="row forecast-third">
+        <div class="time col-1">
+          <h6>
+            18.00
+          </h6>
+        </div>
+        <div class="temp col-1">
+          <h6>
+            12°C
+          </h6>
+        </div>
+        <div class="symbol col-1">
+          <h6>
+            <i class="fas fa-cloud-sun"></i>
+          </h6>
+        </div>
+        <div class="temp-feels col-1">
+          <h6>
+            13°C
+          </h6>
+        </div>
+        <div class="precip col-1">
+          <h6>
+            22%
+          </h6>
+        </div>
+      </div>
+
+      <div class="row forecast-fourth">
+          <div class="time col-1">
+            <h6>
+              21.00
+            </h6>
           </div>
+          <div class="temp col-1">
+            <h6>
+              10°C
+            </h6>
+          </div>
+          <div class="symbol col-1">
+            <h6>
+              <i class="fas fa-cloud-sun"></i>
+            </h6>
+          </div>
+          <div class="temp-feels col-1">
+            <h6>
+              9°C
+            </h6>
+          </div>
+          <div class="precip col-1">
+            <h6>
+              15%
+            </h6>
+          </div>
+      </div>
+
+      <div class="row forecast-fifth">
+        <div class="time col-1">
+          <h6>
+            00.00
+          </h6>
+        </div>
+        <div class="temp col-1">
+          <h6>
+            7°C
+          </h6>
+        </div>
+        <div class="symbol col-1">
+          <h6>
+            <i class="fas fa-cloud-sun"></i>
+          </h6>
+        </div>
+        <div class="temp-feels col-1">
+          <h6>
+            7°C
+          </h6>
+        </div>
+        <div class="precip col-1">
+          <h6>
+            27%
+          </h6>
+        </div>
+      </div>
+<div class="row forecast-fifth">
+  <div class="time col-1">
+    <h6>
+      00.00
+    </h6>
+  </div>
+  <div class="temp col-1">
+    <h6>
+      7°C
+    </h6>
+  </div>
+  <div class="symbol col-1">
+    <h6>
+      <i class="fas fa-cloud-sun"></i>
+    </h6>
+  </div>
+  <div class="temp-feels col-1">
+    <h6>
+      7°C
+    </h6>
+  </div>
+  <div class="precip col-1">
+    <h6>
+      27%
+    </h6>
+  </div>
+</div>
+</div>
       <p> <a href="https://github.com/13raji/Weather-App">open source code</a> coded by RunRajiRan</p>
     </div>
     <script src="src/index.js">

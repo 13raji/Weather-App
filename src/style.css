@@ -34,36 +34,12 @@ form {
 .duck {
   background-image: linear-gradient(120deg, #c68883 0%, #c2e9fb 100%);
 }
-li {
-  list-style: none;
-}
 
+.forecast-wrapper {
+  border-radius: rounded;
+  margin: 40 auto;
+}
 .forecast {
   padding: 50px;
   color: #693935;
-}
-.time {
-  text-align: right;
-  font-size: 20px;
-  background-image: linear-gradient(to left, #aacefd 0%, #f9d423 100%);
-}
-.temp {
-  text-align: center;
-  font-size: 80%;
-}
-.chance {
-  padding: 10px 0;
-  font-size: 130%;
-}
-.temp-low {
-  background-image: linear-gradient(to right, #aacefd 0%, #f9d423 100%);
-}
-.temp-high {
-  background-image: linear-gradient(to left, #f83600 0%, #f9d423 100%);
-}
-.rain {
-  background-image: linear-gradient(to right, #ef4a11 0%, #aacefd 100%);
-}
-.numbers {
-  font-size: 120%;
 }
