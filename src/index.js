@@ -48,8 +48,6 @@ let cityDivert = document.querySelector("#city-divert-Cardiff");
 cityDivert.addEventListener("click", changeCity);
 
 
-
-
 console.log(city);
 function showTemperature(response) {
   console.log(response.data);
@@ -71,6 +69,7 @@ function showTemperature(response) {
   windElement.innerHTML = `Wind speed = ${windSpeedElement}mps`;
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  celciusTemperature=Math.round(response.data.main.temp);
 }
 
 function displayTemperatureCurrent(response) {
@@ -113,5 +112,30 @@ function navigate() {
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", navigate);
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temperatureElement = document.querySelector("#current-temp");
+  let currentTempElement = Math.round(fahrenheitTemperature);
+  temperatureElement.innerHTML = `${currentTempElement}°F`;
+}
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temp");
+  let currentTempElement = Math.round(celciusTemperature);
+  temperatureElement.innerHTML = `${currentTempElement}°C`;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+}
 
+
+let celciusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celcius-link");
+celsiusLink.addEventListener("click", displayCelciusTemperature);
 
