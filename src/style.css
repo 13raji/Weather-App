@@ -23,11 +23,12 @@ p {
   margin: 0 auto;
   padding: 20px 0;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .btn {
   margin-top: 5px;
+  font-size: 0.9rem;
 }
 .form-group .form-control {
   text-align: right;
@@ -50,7 +51,7 @@ p {
 }
 
 .app-wrap {
-  max-width: 800px;
+  max-width: 650px;
   margin: 10px auto;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -60,7 +61,7 @@ p {
   margin-bottom: 20px;
 }
 .forecast-wrapper {
-  max-width: 650px;
+  max-width: 600px;
   margin: auto;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
