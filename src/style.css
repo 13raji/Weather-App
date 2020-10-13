@@ -5,24 +5,23 @@ body {
   text-transform: capitalize;
 }
 
-p {
-  margin-left: 15px;
-  margin-top: 15px;
-}
-
 form {
   display: block;
   margin: 0 auto;
   text-align: right;
 }
 
+p {
+  font-size: x-small;
+  margin: 0;
+}
 .row {
   margin: 0;
 }
 
 .city-divert {
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 20px 0;
   text-align: center;
   font-size: 1.2rem;
 }
@@ -33,11 +32,18 @@ form {
 .form-group .form-control {
   text-align: right;
 }
+.card {
+  padding: 0;
+}
+.card-body {
+  padding: 15px;
+}
 .current {
   color: #a15e59;
 }
 .current-location {
   background-image: linear-gradient(to left, #aacefd 0%, #baa7b9 100%);
+  text-align: right;
 }
 .current-temp {
   background-image: linear-gradient(to left, #baa7b9 0%, #aacefd 100%);
@@ -63,6 +69,7 @@ form {
 
 #forecast {
   text-align: center;
+  font-size: 0.9rem;
 }
 .icon {
   max-width: 70%;
@@ -73,4 +80,11 @@ form {
 .hours-forecast {
   padding: 0, 9;
   line-height: 1;
+}
+#forecast-temp {
+  color: #a15e59;
+  font-weight: bold;
+}
+.footer {
+  margin: 15px;
 }

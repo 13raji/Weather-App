@@ -43,7 +43,7 @@ function displayForecast(response) {
            <h7>
            ${formatHours(forecast.dt * 1000)}
            </h7>
-           <h6>
+           <h6 id="forecast-temp">
            ${Math.round(forecast.main.temp)}°C
            </h6>
            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" , alt="forecast.weather[0].description" class="icon"/>
