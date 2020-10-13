@@ -1,5 +1,5 @@
 body {
-  font-family: "Baloo Bhaina 2", cursive;
+  font-family: "Jua", sans-serif;
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   color: #c68883;
 }
@@ -22,18 +22,25 @@ p {
   margin-top: 15px;
 }
 
-.row {
-  margin: 0;
-}
-.cities {
-  margin: 0 auto;
-  padding: 30px 0;
-  font-size: 1.2rem;
-}
 form {
   display: block;
   margin: 0 auto;
   text-align: right;
+}
+
+.row {
+  margin: 0;
+}
+
+.city-divert {
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.btn {
+  margin-top: 5px;
 }
 .form-group .form-control {
   text-align: right;
@@ -58,16 +65,11 @@ form {
 .forecast-wrapper {
   max-width: 700px;
   margin: auto;
-}
-.forecast {
-  padding: 50px;
-  color: #693935;
-}
-.forecast-frame {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
   padding: 2%;
 }
-h5 .forecast-frame {
-  text-align: right;
+.forecast {
+  padding: 50px;
+  color: #693935;
 }
