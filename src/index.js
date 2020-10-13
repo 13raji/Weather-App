@@ -36,7 +36,6 @@ function displayForecast(response) {
   let forecastElement= document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast= null;
-  console.log(forecast);
   for (let index= 0; index < 6; index++){
     forecast = response.data.list[index];
     forecastElement.innerHTML+= `
@@ -78,15 +77,6 @@ let city = document.querySelector("#search-form");
 city.addEventListener("submit", handleSubmit);
 
 search("London");
-
-function changeCity(event){
-  event.preventDefault;
-  
-
-}
-
-let cityDivert = document.querySelector("#city-divert-Cardiff");
-cityDivert.addEventListener("click", changeCity);
 
 
 console.log(city);
@@ -180,3 +170,12 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celcius-link");
 celsiusLink.addEventListener("click", displayCelciusTemperature);
 
+function cityDivert(event) {
+  event.preventDefault;
+  console.log(event.target.innerHTML);
+  let cityDivertElement = event.target.innerHTML;
+  search(`${cityDivertElement}`);
+}
+
+let cityLink = document.querySelector(".city-divert");
+cityLink.addEventListener("click", cityDivert);
