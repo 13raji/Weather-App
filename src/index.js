@@ -78,8 +78,6 @@ city.addEventListener("submit", handleSubmit);
 
 search("London");
 
-
-console.log(city);
 function showTemperature(response) {
   let currentTempElement = document.querySelector("#current-temp");
   let currentCityElement = document.querySelector("#city");
