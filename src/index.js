@@ -33,23 +33,29 @@ function formatHours(timestamp){
 }
 
 function displayForecast(response) {
-  let forecastZero= response.data.list[0];
-  console.log(forecastZero);
-  let timeZeroElement= document.querySelector("#time-zero");
-  timeZeroElement.innerHTML=`${formatHours(forecastZero.dt * 1000)}`;
-  let tempZeroElement= document.querySelector("#temp-zero");
-  let tempZero= Math.round(forecastZero.main.temp);
-  tempZeroElement.innerHTML=`${tempZero}°C`
-  let feelsLikeZeroElement= document.querySelector("#feels-like-zero");
-  let feelsLikeZero= Math.round(forecastZero.main.feels_like);
-  feelsLikeZeroElement.innerHTML=`Feels like ${feelsLikeZero}°C`
-  let iconZeroElement= document.querySelector("#icon-zero")
-  console.log(forecastZero.weather[0].icon)
-  iconZeroElement.setAttribute("src", `http://openweathermap.org/img/wn/${forecastZero.weather[0].icon}@2x.png`);
-  iconZeroElement.setAttribute("alt", forecastZero.weather[0].description);
-  let rainZeroElement= document.querySelector("#rain-zero");
-  let rainZero= Math.round(forecastZero.rain);
-  rainZeroElement.innerHTML=`${rainZero}mm rain`
+  let forecastElement= document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast= null;
+  console.log(forecast);
+  for (let index= 0; index < 6; index++){
+    forecast = response.data.list[index];
+    forecastElement.innerHTML+= `
+        <div class="col-2">
+           <h5>
+           ${formatHours(forecast.dt * 1000)}
+           </h5>
+           <h5>
+           ${Math.round(forecast.main.temp)}°C
+           </h5>
+           <h7>
+           <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" , alt="forecast.weather[0].description" class="icon"/>
+           </h7>
+          <h6>
+          Feels like ${Math.round(forecast.main.feels_like)}°C
+          </h6>
+        </div>`
+  }
+  
 }
 
 function search(city) {
