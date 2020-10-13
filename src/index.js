@@ -39,19 +39,17 @@ function displayForecast(response) {
   for (let index= 0; index < 6; index++){
     forecast = response.data.list[index];
     forecastElement.innerHTML+= `
-        <div class="col-2">
-           <h5>
-           ${formatHours(forecast.dt * 1000)}
-           </h5>
-           <h5>
-           ${Math.round(forecast.main.temp)}°C
-           </h5>
+        <div class="col-2 hours-forecast">
            <h7>
-           <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" , alt="forecast.weather[0].description" class="icon"/>
+           ${formatHours(forecast.dt * 1000)}
            </h7>
-          <h6>
+           <h6>
+           ${Math.round(forecast.main.temp)}°C
+           </h6>
+           <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" , alt="forecast.weather[0].description" class="icon"/>
+          <h7>
           Feels like ${Math.round(forecast.main.feels_like)}°C
-          </h6>
+          </h7>
         </div>`
   }
   
